@@ -42,7 +42,7 @@ export default function ParticleHelix() {
                 <PointMaterial
                     transparent
                     color="#00f3ff"
-                    size={0.010}
+                    size={0.0020}
                     sizeAttenuation={true}
                     depthWrite={false}
                 />

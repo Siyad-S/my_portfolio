@@ -104,7 +104,7 @@ export const skills = [
     { name: 'Next.js', slug: 'nextdotjs', color: '#ffffff' },
     { name: 'React', slug: 'react', color: '#61DAFB' },
     { name: 'Node.js', slug: 'nodedotjs', color: '#339933' },
-    { name: 'Express.js', slug: 'express', color: '#000000' },
+    { name: 'Express.js', slug: 'express', color: '#6a6969ff' },
     { name: 'PostgreSQL', slug: 'postgresql', color: '#336791' },
     { name: 'MongoDB', slug: 'mongodb', color: '#47A248' },
     { name: 'TypeScript', slug: 'typescript', color: '#3178C6' },
