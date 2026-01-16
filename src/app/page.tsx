@@ -20,6 +20,7 @@ import { Tilt } from 'react-tilt';
 const ParticleHelix = dynamic(() => import('@/components/canvas/HeroParticles'), { ssr: false });
 const TechCarousel = dynamic(() => import('@/components/canvas/SkillCarousel'), { ssr: false });
 const ContactWave = dynamic(() => import('@/components/canvas/ContactWave'), { ssr: false });
+const ScrollIndicator = dynamic(() => import('@/components/ui/ScrollIndicator'), { ssr: false });
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,6 +113,10 @@ export default function Home() {
                 );
               })}
             </div>
+            {/* Scroll Indicator for Hero */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+              <ScrollIndicator targetId="about" direction="down" />
+            </div>
           </div>
         </section>
 
@@ -161,6 +166,14 @@ export default function Home() {
           </div>
           <div className="pointer-events-none z-10 text-center">
             <h2 className="text-4xl font-bold text-white/10 uppercase tracking-widest">Skills</h2>
+          </div>
+
+          {/* Scroll Indicators for Skills */}
+          <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20">
+            <ScrollIndicator targetId="about" direction="up" />
+          </div>
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+            <ScrollIndicator targetId="work" direction="down" />
           </div>
         </section>
 
