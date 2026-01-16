@@ -1,12 +1,13 @@
 'use client';
 
 import { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { Points, PointMaterial, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 
 export default function ParticleHelix() {
     const ref = useRef<THREE.Points>(null!);
+    const { viewport } = useThree(); // Get viewport dimensions
 
     const sphere = useMemo(() => {
         const temp = new Float32Array(5000 * 3);
@@ -30,14 +31,18 @@ export default function ParticleHelix() {
         ref.current.rotation.y -= delta / 15;
     });
 
+    // Responsive scale calculation
+    const isMobile = viewport.width < 5;
+    const scale = isMobile ? 0.6 : 1;
+
     return (
-        <group rotation={[0, 0, Math.PI / 4]}>
+        <group rotation={[0, 0, Math.PI / 4]} scale={scale}>
             <OrbitControls makeDefault enableZoom={false} autoRotate autoRotateSpeed={0.5} enablePan={false} />
             <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
                 <PointMaterial
                     transparent
                     color="#00f3ff"
-                    size={0.0015}
+                    size={0.010}
                     sizeAttenuation={true}
                     depthWrite={false}
                 />

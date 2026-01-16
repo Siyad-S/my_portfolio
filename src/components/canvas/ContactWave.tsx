@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { Points, PointMaterial, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -48,10 +48,16 @@ export default function ContactWave() {
         ref.current.geometry.attributes.position.needsUpdate = true;
     });
 
+    // Responsive scaling
+    const { viewport } = useThree();
+    const isMobile = viewport.width < 5;
+    const scale = isMobile ? 0.7 : 1;
+    const yPos = isMobile ? -1.5 : -2;
+
     return (
-        <group>
+        <group scale={scale}>
             {/* Tilted view for the wave */}
-            <group rotation={[Math.PI / 8, 0, 0]} position={[0, -2, 0]}>
+            <group rotation={[Math.PI / 8, 0, 0]} position={[0, yPos, 0]}>
                 <Points ref={ref} positions={positions} stride={3} frustumCulled={false}>
                     <PointMaterial
                         transparent

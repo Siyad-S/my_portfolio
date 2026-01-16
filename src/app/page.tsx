@@ -83,19 +83,19 @@ export default function Home() {
           </View>
 
           <div className="relative z-10 text-center px-4 mix-blend-difference">
-            <h1 className="text-6xl md:text-9xl font-bold tracking-tight text-white mb-6 select-none">
+            <h1 className="text-4xl md:text-9xl font-bold tracking-tight text-white mb-6 select-none">
               <span className="hero-text-char inline-block">S</span>
               <span className="hero-text-char inline-block">I</span>
               <span className="hero-text-char inline-block">Y</span>
               <span className="hero-text-char inline-block">A</span>
               <span className="hero-text-char inline-block">D</span>
-              <span className="inline-block w-4 m-2"></span>
+              <span className="inline-block m-2"></span>
               <span className="hero-text-char inline-block">S</span>
             </h1>
-            <h2 className="text-2xl md:text-4xl font-light text-gray-300 tracking-widest uppercase mb-8">
+            <h2 className="text-xl md:text-4xl font-light text-gray-300 tracking-widest uppercase mb-8">
               Full Stack Developer
             </h2>
-            <div className="flex items-center justify-center gap-6">
+            <div className="flex items-center justify-center gap-4 md:gap-6">
               {socials.map((social) => {
                 const Icon = Icons[social.icon as keyof typeof Icons] as any;
                 return (
@@ -104,10 +104,10 @@ export default function Home() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white/5 border border-white/10 rounded-full hover:bg-neon-cyan/20 hover:text-neon-cyan hover:border-neon-cyan/50 transition-all duration-300 text-gray-400 group"
+                    className="p-2 md:p-3 bg-white/5 border border-white/10 rounded-full hover:bg-neon-cyan/20 hover:text-neon-cyan hover:border-neon-cyan/50 transition-all duration-300 text-gray-400 group"
                     aria-label={social.name}
                   >
-                    {Icon ? <Icon size={24} className="group-hover:scale-110 transition-transform" /> : social.name}
+                    {Icon ? <Icon className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" /> : social.name}
                   </a>
                 );
               })}
@@ -116,8 +116,8 @@ export default function Home() {
         </section>
 
         {/* ABOUT SECTION */}
-        <section id="about" ref={aboutRef} className="relative py-32 px-6">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <section id="about" ref={aboutRef} className="relative py-20 md:py-32 px-6">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div className="space-y-8">
               <Parallax speed={0.8}>
                 <h2 className="text-sm font-bold tracking-[0.2em] text-neon-cyan uppercase mb-4">About Me</h2>
@@ -165,7 +165,7 @@ export default function Home() {
         </section>
 
         {/* PROJECTS SECTION - THE GRID */}
-        <section id="work" ref={workRef} className="relative py-32 px-6">
+        <section id="work" ref={workRef} className="relative py-20 md:py-32 px-6">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold mb-16 text-center">Worked Projects</h2>
             <div className="w-full">
@@ -175,7 +175,7 @@ export default function Home() {
         </section>
 
         {/* CONTACT SECTION */}
-        <section id="contact" ref={contactRef} className="relative py-32 px-6 border-t border-white/5 overflow-hidden">
+        <section id="contact" ref={contactRef} className="relative py-20 md:py-32 px-6 border-t border-white/5 overflow-hidden">
           {/* 3D Background for Contact Section */}
           <div className="absolute inset-0 z-0 pointer-events-none opacity-50">
             <View index={3} className="w-full h-full">

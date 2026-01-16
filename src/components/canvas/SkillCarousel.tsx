@@ -42,7 +42,7 @@ function SkillItem({ index, total, tech, radius }: { index: number; total: numbe
 
                 {/* Label on Hover */}
                 <Text
-                    position={[0, -0.6, 0]}
+                    position={[0, -0.7, 0]}
                     fontSize={0.2}
                     color="white"
                     anchorX="center"
@@ -62,17 +62,20 @@ export default function SkillCarousel() {
 
     // Responsive radius logic
     const radius = useMemo(() => {
-        if (viewport.width < 5) return 2;    // Mobile (tight)
-        if (viewport.width < 8) return 2.5;  // Tablet
-        return 3;                            // Desktop (wide)
+        if (viewport.width < 5) return 2.2;  // Mobile (slightly wider)
+        if (viewport.width < 8) return 2.8;  // Tablet
+        return 3.5;                          // Desktop (wide)
     }, [viewport.width]);
+
+    const isMobile = viewport.width < 5;
+    const globalScale = isMobile ? 0.75 : 1;
 
     useFrame((state, delta) => {
         groupRef.current.rotation.y += delta * 0.1;
     });
 
     return (
-        <group ref={groupRef} rotation={[0, 0, 0.1]}>
+        <group ref={groupRef} rotation={[0, 0, 0.1]} scale={globalScale}>
             <OrbitControls makeDefault enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1} />
             {skills.map((tech, i) => (
                 <SkillItem key={tech.name} index={i} total={skills.length} tech={tech} radius={radius} />
