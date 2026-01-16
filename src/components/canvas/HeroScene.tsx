@@ -38,14 +38,6 @@ export default function HeroScene() {
                 shadows
                 className="w-full h-full pointer-events-none"
                 camera={{ position: [0, 0, 10], fov: 30 }}
-            // We don't set pointer-events-auto on canvas to allow clicks to pass through
-            // If specific meshes need interaction, we rely on R3F event system 
-            // but since the canvas is pointer-events-none, the browser won't send events to it.
-            // To fix this for interactive meshes, we would usually use eventSource={document.body}
-            // However, for this hero abstract background, we mainly want rotation/visuals.
-            // If we specifically wanted clickable meshes *and* clickable DOM behind them, it's complex.
-            // The prompt asks to handle pointer events so canvas doesn't block DOM.
-            // We will assume visual-only for now or use global mouse tracking for the "rotate based on mouse" effect.
             >
                 <Lights />
                 <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
