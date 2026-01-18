@@ -9,6 +9,7 @@ import { View } from '@react-three/drei';
 import Navbar from '@/components/layout/Navbar';
 import Parallax from '@/components/ui/Parallax';
 import ProjectSlider from '@/components/ui/ProjectSlider';
+import ExperienceTimeline from '@/components/ui/ExperienceTimeline';
 import ContactForm from '@/components/ui/ContactForm';
 import { projects, socials, aboutMe } from '@/lib/data';
 import * as Icons from 'lucide-react';
@@ -32,6 +33,7 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const techRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
 
   const [activeSection, setActiveSection] = useState('home');
 
@@ -50,6 +52,7 @@ export default function Home() {
     if (heroRef.current) observer.observe(heroRef.current);
     if (aboutRef.current) observer.observe(aboutRef.current);
     if (skillsRef.current) observer.observe(skillsRef.current);
+    if (experienceRef.current) observer.observe(experienceRef.current);
     if (workRef.current) observer.observe(workRef.current);
     if (contactRef.current) observer.observe(contactRef.current);
 
@@ -173,7 +176,24 @@ export default function Home() {
             <ScrollIndicator targetId="about" direction="up" />
           </div>
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
-            <ScrollIndicator targetId="work" direction="down" />
+            <ScrollIndicator targetId="experience" direction="down" />
+          </div>
+        </section>
+
+        {/* EXPERIENCE SECTION */}
+        <section id="experience" ref={experienceRef} className="relative py-20 md:py-32 px-6 bg-black/40">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-sm font-bold tracking-[0.2em] text-neon-cyan uppercase mb-4">Brief History</h2>
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Experience</h3>
+            </div>
+
+            <ExperienceTimeline />
+
+            {/* Scroll Indicators for Experience */}
+            <div className="flex justify-center mt-16 relative z-20">
+              <ScrollIndicator targetId="work" direction="down" />
+            </div>
           </div>
         </section>
 

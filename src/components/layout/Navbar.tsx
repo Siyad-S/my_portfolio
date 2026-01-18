@@ -19,6 +19,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
         { name: 'Home', href: '#home' },
         { name: 'About', href: '#about' },
         { name: 'Skills', href: '#skills' },
+        { name: 'Experience', href: '#experience' },
         { name: 'Work', href: '#work' },
         { name: 'Contact', href: '#contact' }
     ];
@@ -51,7 +52,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
     };
 
     return (
-        <nav ref={navRef} className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-md">
+        <nav ref={navRef} className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-xl">
             <div className="flex items-center justify-between px-6 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 shadow-lg shadow-black/10">
                 {navItems.map((item) => (
                     <Link

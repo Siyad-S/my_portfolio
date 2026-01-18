@@ -143,3 +143,42 @@ export const aboutMe = [
         imagePath: "/images/about_me.jpeg"
     }
 ]
+
+export const experience = [
+    {
+        company: "Stackmod Innovations Pvt. Ltd.",
+        role: "Junior Software Engineer",
+        period: "Mar 2024 - May 2025",
+        description: "Spearheaded the development of the Handy Squad ecosystem, delivering a suite of SEO-optimized web applications, CRM tools, and admin dashboards.",
+        achievements: [
+            "Handy Squad CRM: Automating lead generation by integrating Meta Lead Ads and Zoho Books API to auto-generate invoices and streamline the sales pipeline.",
+            "Admin Dashboard: Engineered a scalable media pipeline using AWS S3 (Signed URLs) and AWS Elastic Transcoder for secure, high-quality video processing.",
+            "Web App Architecture: Built an SEO-friendly application using Next.js Dynamic SEO and Google Places API, implementing template-based rendering for service pages.",
+            "Security & Access: Implemented Role-Based Access Control (RBAC) for lead management and secured public forms against spam using Google reCAPTCHA."
+        ]
+    },
+    {
+        company: "Stackmod Innovations Pvt. Ltd.",
+        role: "Software Engineer",
+        period: "May 2025 - Jul 2025",
+        description: "Worked on complex logics of 'Communa', a community-based medical course platform.",
+        achievements: [
+            "Complex Workflows: Designed advanced membership transfer features with role-based flows and ownership transfer capabilities for medical community management.",
+            "Backend Optimization: Optimized data retrieval by constructing complex MongoDB aggregation pipelines, significantly reducing query response times for data-heavy dashboards.",
+            "Secure Integrations: Implemented Postmark for hierarchical email notifications and configured AWS Secrets Manager to securely manage sensitive credentials.",
+            "Payment Systems: Integrated external payment webhooks to handle real-time transaction processing and automate membership plan updates."
+        ]
+    },
+    {
+        company: "Personal Projects",
+        role: "Full Stack Developer",
+        period: "Aug 2025 - Present",
+        description: "Architecting 'Fragrance Kart', a high-performance e-commerce monorepo built with Next.js 15 and cinema-grade UI.",
+        achievements: [
+            "Modern Architecture: Architected a scalable monorepo using Next.js 15 and Express.js, implementing Hybrid Rendering (SSR + CSR) for optimal SEO and performance.",
+            "Advanced Security: Secured user sessions with a robust dual-token system (Access/Refresh rotation) and Google OAuth 2.0 via Passport.js.",
+            "Performance Engineering: Achieved a 40% reduction in network overhead by engineering efficient state management with Redux Toolkit and RTK Query.",
+            "UI/UX Excellence: Designed a premium interface using Tailwind CSS v4 and AI-generated GSAP animations for complex scroll-triggered effects."
+        ]
+    }
+];
