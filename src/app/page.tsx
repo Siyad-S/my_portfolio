@@ -46,7 +46,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.25, rootMargin: '-10% 0px -10% 0px' }
+      { threshold: 0.15, rootMargin: '-10% 0px -10% 0px' }
     );
 
     if (heroRef.current) observer.observe(heroRef.current);
