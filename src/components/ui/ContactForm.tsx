@@ -72,7 +72,7 @@ export default function ContactForm() {
                     <input
                         {...register('name')}
                         className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan transition-colors text-white"
-                        placeholder="John Doe"
+                        placeholder="Enter your name"
                     />
                     {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
                 </div>
@@ -82,7 +82,7 @@ export default function ContactForm() {
                     <input
                         {...register('email')}
                         className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-cyan transition-colors text-white"
-                        placeholder="john@example.com"
+                        placeholder="Enter your email"
                     />
                     {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
                 </div>
