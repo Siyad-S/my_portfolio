@@ -1,0 +1,23 @@
+/* Custom Swiper Styles */
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  /* height: 300px; */ 
+}
+
+/* Ensure 3D effect is smooth */
+.swiper-3d {
+  perspective: 1200px;
+}
+
+.swiper-button-prev-custom::after,
+.swiper-button-next-custom::after {
+  content: none;
+}
