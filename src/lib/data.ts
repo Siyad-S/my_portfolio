@@ -23,6 +23,26 @@ export const projects = [
         gallery: []
     },
     {
+        title: "Cinematic Combucha",
+        tech: ["React.js", "Next.js 16", "Tailwind CSS v4", "Framer Motion", "Lenis", "Whisk", "Flow", "Antigravity"],
+        image: "/projects/3d-combucha-web-app.png",
+        github: "https://github.com/Siyad-S/cinematic-3d-product-web-app",
+        live: "https://cinematic-3d-product-web-app.vercel.app/",
+        color: "#FF8C00",
+        company: "",
+        type: "Personal Project",
+        description: "A 3D cinematic web experience featuring fluid animations and AI-generated product visuals, exploring the concepts of 'Whisk' and 'Flow'.",
+        features: ["3D Cinematic Scrollytelling", "AI-Generated Image Sequences", "Smooth Lenis Scrolling", "Interactive animations"],
+        details: [
+            { title: "Project Concept", content: "An experimental web application pushing the boundaries of traditional web design by integrating cinematic 3D elements and fluid interactions." },
+            { title: "AI-Powered Content", content: "Utilized Whisk for consistent, high-fidelity image generation and Flow to animate these images into seamless video sequences." },
+            { title: "Agentic Development", content: "The entire application was built using Antigravity, leveraging advanced agentic coding capabilities to rapid-prototype and deploy." },
+            { title: "Tech Stack", content: "Built with Next.js 16 and React 19, featuring Tailwind CSS v4 for styling and Framer Motion for complex orchestrations." },
+            { title: "Performance", content: "Implemented Lenis for buttery-smooth scrolling to complement the 'Antigravity' design philosophy of weightlessness." }
+        ],
+        gallery: []
+    },
+    {
         title: "Communa",
         tech: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "Material UI", "Redux", "RTK Query", "Postmark", "AWS"],
         image: "/projects/communa_app_thumb.png",
