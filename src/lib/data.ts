@@ -1,5 +1,25 @@
 export const projects = [
     {
+        title: "Pinnacle Hifzul Quran Academy",
+        tech: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "React Three Fiber", "Framer Motion", "Lucide React", "SEO", "JSON-LD"],
+        image: "/projects/pinnacle_thumb.png",
+        github: "https://github.com/Siyad-S/pinnacle-hifiz-college",
+        live: "https://www.pinnaclehifzulquranacademy.com/",
+        color: "#10B981",
+        company: "",
+        type: "Freelance Project",
+        description: "Modern, high-performance web platform delivered for an educational client, featuring interactive 3D particle visuals, curriculum showcases, and admission inquiry workflows.",
+        features: ["Interactive 3D Particle Visuals", "Curriculum & Program Showcase", "Modern Glassmorphism UI", "Inquiry & Lead Capture Forms", "JSON-LD & Local SEO"],
+        details: [
+            { title: "Client Delivery & Scope", content: "Designed and developed an end-to-end web platform delivered for a freelance client to establish the digital presence of Pinnacle Hifzul Quran Academy in Kollam, Kerala." },
+            { title: "Architecture & 3D Visuals", content: "Built with Next.js and TypeScript, integrating React Three Fiber and Three.js to render fluid interactive background particle canvases alongside smooth Framer Motion animations." },
+            { title: "UI/UX & Design System", content: "Engineered a custom, mobile-responsive glassmorphism theme using Tailwind CSS tailored to the academy's branding, academic standards, and campus amenities." },
+            { title: "Lead Generation & Inquiries", content: "Developed seamless admission inquiry and contact forms with integrated validation, linking prospective guardians directly with administrative communication channels." },
+            { title: "SEO & Discoverability", content: "Implemented rich structured data (JSON-LD EducationalOrganization), OpenGraph meta tags, and optimized performance to maximize organic local search discoverability." }
+        ],
+        gallery: []
+    },
+    {
         title: "Fragrance Kart",
         tech: ["React.js", "Next.js 15", "Node.js", "TypeScript", "Express.js", "Redux Toolkit", "MongoDB", "Docker", "Cloudinary", "tailwind CSS", "GSAP", "shadcn/ui", "Zod", "RTK Query", "Passport.js", "Razorpay", "Google OAuth", "JWT", "AI-Generated Animations", "nodemailer", "Brevo", "Vercel", "Render"],
         image: "/projects/fragrance_kart_project_thumb.png",
@@ -161,7 +181,7 @@ export const aboutMe = [
     {
         title: "Engineering Performance behind Pixel-Perfection.",
         description: `Software Engineer bridging the gap between rigorous logic and creative design. I bring professional experience in delivering complex corporate applications, complemented by a dedication to architecting independent platforms that showcase end-to-end code ownership. My approach integrates advanced engineering principles with modern innovation, ensuring that every solution is as efficient as it is engaging.`,
-        imagePath: "/images/about_me.jpeg"
+        imagePath: "/images/about_me.png"
     }
 ]
 
@@ -191,15 +211,16 @@ export const experience = [
         ]
     },
     {
-        company: "Personal Projects",
+        company: "Freelance & Independent Projects",
         role: "Full Stack Developer",
         period: "Aug 2025 - Present",
-        description: "Architecting 'Fragrance Kart', a high-performance e-commerce monorepo built with Next.js 15 and cinema-grade UI.",
+        description: "Delivering production client web platforms and architecting scalable full-stack applications with high-performance 3D visuals, robust APIs, and modern design systems.",
         achievements: [
-            "Modern Architecture: Architected a scalable monorepo using Next.js 15 and Express.js, implementing Hybrid Rendering (SSR + CSR) for optimal SEO and performance.",
+            "Client Delivery (Pinnacle Academy): Engineered and deployed an end-to-end web platform featuring interactive Three.js 3D particle visuals, admission inquiry workflows, and JSON-LD structured SEO.",
+            "Modern Architecture (Fragrance Kart): Architected a scalable full-stack monorepo using Next.js 15 and Express.js, implementing Hybrid Rendering (SSR + CSR) for optimal SEO and performance.",
             "Advanced Security: Secured user sessions with a robust dual-token system (Access/Refresh rotation) and Google OAuth 2.0 via Passport.js.",
             "Performance Engineering: Achieved a 40% reduction in network overhead by engineering efficient state management with Redux Toolkit and RTK Query.",
-            "UI/UX Excellence: Designed a premium interface using Tailwind CSS v4 and AI-generated GSAP animations for complex scroll-triggered effects."
+            "UI/UX & Motion: Designed cinema-grade interfaces using Tailwind CSS v4, Framer Motion, and AI-accelerated GSAP animations for fluid scroll-triggered effects."
         ]
     }
 ];

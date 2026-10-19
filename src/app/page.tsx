@@ -168,7 +168,7 @@ export default function Home() {
             </View>
           </div>
           <div className="pointer-events-none z-10 text-center">
-            <h2 className="text-4xl font-bold text-white/10 uppercase tracking-widest">Skills</h2>
+            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Skills</h3>
           </div>
 
           {/* Scroll Indicators for Skills */}
@@ -185,7 +185,7 @@ export default function Home() {
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-sm font-bold tracking-[0.2em] text-neon-cyan uppercase mb-4">Brief History</h2>
-              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Experience</h3>
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Experiences</h3>
             </div>
 
             <ExperienceTimeline />
@@ -200,7 +200,10 @@ export default function Home() {
         {/* PROJECTS SECTION - THE GRID */}
         <section id="work" ref={workRef} className="relative py-20 md:py-32 px-6">
           <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-16 text-center">Worked Projects</h2>
+            <div className="text-center mb-16">
+              <h2 className="text-sm font-bold tracking-[0.2em] text-neon-cyan uppercase mb-4">Worked Projects</h2>
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Projects</h3>
+            </div>
             <div className="w-full">
               <ProjectSlider />
             </div>

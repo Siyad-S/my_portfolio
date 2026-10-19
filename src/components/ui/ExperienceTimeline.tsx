@@ -30,7 +30,7 @@ export default function ExperienceTimeline() {
                         </div>
 
                         {/* Content Card */}
-                        <div className={`w-full md:w-[calc(50%-40px)] pl-12 md:pl-0 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                        <div className="w-full md:w-[calc(50%-40px)] pl-12 md:pl-0 text-left">
                             <div className="relative group">
                                 {/* Border Glow */}
                                 <div className="absolute -inset-0.5 bg-gradient-to-r from-neon-cyan/50 to-purple-500/50 rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur" />
@@ -39,7 +39,7 @@ export default function ExperienceTimeline() {
                                 <div className="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-8 hover:bg-white/5 transition-colors duration-300">
                                     <h3 className="text-2xl font-bold text-white mb-2">{item.company}</h3>
 
-                                    <div className={`flex flex-wrap gap-4 items-center mb-4 text-neon-cyan ${index % 2 !== 0 ? 'md:justify-end' : ''}`}>
+                                    <div className="flex flex-wrap gap-4 items-center mb-4 text-neon-cyan">
                                         <div className="flex items-center gap-2 text-sm bg-neon-cyan/10 px-3 py-1 rounded-full border border-neon-cyan/20">
                                             <Briefcase size={14} />
                                             <span>{item.role}</span>
@@ -54,13 +54,11 @@ export default function ExperienceTimeline() {
                                         {item.description}
                                     </p>
 
-                                    <ul className={`space-y-2 ${index % 2 !== 0 ? 'md:flex md:flex-col md:items-end' : ''}`}>
+                                    <ul className="space-y-2">
                                         {item.achievements.map((achievement, i) => (
                                             <li key={i} className="flex gap-2 items-start text-sm text-gray-400">
-                                                <span className="text-neon-cyan mt-1.5">•</span>
-                                                <span className={index % 2 !== 0 ? 'md:text-right' : ''}>
-                                                    {achievement}
-                                                </span>
+                                                <span className="text-neon-cyan mt-1.5 shrink-0">•</span>
+                                                <span>{achievement}</span>
                                             </li>
                                         ))}
                                     </ul>
